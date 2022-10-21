@@ -3,7 +3,7 @@ import json
 server = '''
 {
 	"id": "0001",
-	"type": "donut",
+	"type": true,
 	"name": "Cake",
 	"ppu": 0.55,
 	"batters":
@@ -30,4 +30,9 @@ server = '''
 '''
 
 data = json.loads(server)
-print(data['type'])
+print(data['type']) #converted to json file (load data in json format)
+# print(type(data))
+
+decodejson = json.dumps(data, indent=3) #in python dictionary format, it can't be index by key
+print(decodejson)
+# print(type(data))
